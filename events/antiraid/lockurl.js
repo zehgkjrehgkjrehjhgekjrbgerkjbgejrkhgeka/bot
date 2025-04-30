@@ -36,7 +36,7 @@ module.exports = {
             "credentials": "include",
             "headers": {
                 "accept": "*/*",
-                "authorization": "Bot " + client.config.token,
+                "authorization": "Bot " + process.env.TOKEN,
                 "content-type": "application/json",
             },
             "referrerPolicy": "no-referrer-when-downgrade",

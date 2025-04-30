@@ -35,7 +35,7 @@ if (pass === false) return message.channel.send(`Vous n'avez pas la permission d
         let id = args[0]
         request.get(`https://discordapp.com/api/users/${id}`, {
             headers: {
-                'Authorization': `Bot ${client.config.token}`
+                'Authorization': `Bot ${process.env.TOKEN}`
             }
         }, async (err, res, body) => {
             if(err) return message.channel.send(`Cet utilisateur n'existe pas ou est introuvable.`);

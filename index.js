@@ -1,4 +1,6 @@
-const {bot} = require('./structures/client')
+const {bot} = require('./structures/client');
+const dotenv = require('dotenv');
+dotenv.config();
 
 global.ReadableStream = require('web-streams-polyfill').ReadableStream;
 

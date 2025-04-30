@@ -36,7 +36,7 @@ if(!staff.includes(message.author.id) && !client.config.buyers.includes(message.
 if (pass === false) return message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`)
 
        let user = message.mentions.users.first() || message.author;
-       const bannerurl = await banner(user.id, client.config.token, { size : 4096 }) 
+       const bannerurl = await banner(user.id, process.env.TOKEN, { size : 4096 }) 
 
        if (!bannerurl) return message.channel.send(user.id === message.author.id ? `Vous n'avez pas de bannière.` : `Cet utilisateur n'a pas de bannière.`);
        let Embed = new Discord.MessageEmbed()
